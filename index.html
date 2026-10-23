@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D2VFG63P8D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-D2VFG63P8D');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>vedntEdu</title>
+  <meta name="description" content="vedntEdu is an independent course catalog of interactive learning modules across nine departments.">
+  <meta name="theme-color" content="#1e5a43">
+  <link rel="icon" id="favicon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script>
+    // Apply the saved theme before first paint so there's no flash.
+    try {
+      var t = JSON.parse(localStorage.getItem('vedu.theme'));
+      if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="term-strip">
+    <div class="wrap term-strip-inner">
+      <span id="term-name">Fall Term 2026</span>
+      <span class="term-strip-sep" aria-hidden="true">·</span>
+      <span id="term-week"></span>
+      <span class="term-strip-right">Press <kbd id="panic-hint">`</kbd> to switch to study notes</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap site-header-inner">
+      <a class="wordmark" href="#/" aria-label="vedntEdu home">
+        <svg class="crest" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="currentColor"/><path d="M8 9.5h4.2l3.8 10.6 3.8-10.6H24L18 24h-4z" fill="var(--paper)"/></svg>
+        <span class="wordmark-text">vednt<span>Edu</span></span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="#/courses" data-nav="courses">Catalog</a>
+        <a href="#/departments" data-nav="departments">Departments</a>
+        <a href="#/schedule" data-nav="schedule">My Schedule</a>
+        <a href="#/preferences" data-nav="preferences">Preferences</a>
+      </nav>
+      <form class="search" role="search" id="search-form">
+        <label class="visually-hidden" for="search">Search courses</label>
+        <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M13 13l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <input id="search" type="search" placeholder="Search courses" autocomplete="off" spellcheck="false">
+        <kbd class="search-key" aria-hidden="true">/</kbd>
+      </form>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1"></main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer-inner">
+      <div>
+        <p class="footer-mark">vednt<span>Edu</span></p>
+        <p class="footer-note">An independent learning collective. Interactive course materials are supplied by their original publishers through the GameDistribution network and remain their property.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="#/courses">Full catalog</a>
+        <a href="#/departments">Departments</a>
+        <a href="#/lesson">Study notes</a>
+        <a href="#/preferences">Preferences</a>
+      </nav>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/js/catalog.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
